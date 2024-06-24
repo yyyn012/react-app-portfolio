@@ -34,11 +34,12 @@ function App() {
       </form>
       <hr />
       <ul>
-        {writeTodo.map((item) => (
-          <li>{item}</li>
+        {writeTodo.map((item, index) => (
+          <li key={index}>{item}</li>
         ))}
       </ul>
     </div>
+    // map()가 key를 필요로 하는 이유는 모든 item을 인식해버리기 때문이다.
   );
 }
 
